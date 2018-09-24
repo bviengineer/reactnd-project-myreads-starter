@@ -15,9 +15,8 @@ class Main extends Component {
                   <div className="bookshelf-books">
                     <ol className="books-grid">
                       <li>
-                          <Book />
+                        <Book />
                       </li>
-                      <li></li>
                     </ol>
                   </div>
                 </div>
@@ -26,9 +25,8 @@ class Main extends Component {
                   <div className="bookshelf-books">
                     <ol className="books-grid">
                       <li>
-                      <Book />
+                        <Book />
                       </li>
-                      <li></li>
                     </ol>
                   </div>
                 </div>
@@ -39,8 +37,6 @@ class Main extends Component {
                       <li>
                         <Book />
                       </li>
-                      <li></li>
-                      <li></li>
                     </ol>
                   </div>
                 </div>
