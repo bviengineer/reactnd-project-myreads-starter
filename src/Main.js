@@ -1,4 +1,5 @@
 import React, {Component } from 'react';
+import Book from './Book.js';
 
 class Main extends Component {
     render(){
@@ -13,7 +14,9 @@ class Main extends Component {
                   <h2 className="bookshelf-title">Currently Reading</h2>
                   <div className="bookshelf-books">
                     <ol className="books-grid">
-                      <li></li>
+                      <li>
+                          <Book />
+                      </li>
                       <li></li>
                     </ol>
                   </div>
@@ -22,7 +25,9 @@ class Main extends Component {
                   <h2 className="bookshelf-title">Want to Read</h2>
                   <div className="bookshelf-books">
                     <ol className="books-grid">
-                      <li></li>
+                      <li>
+                      <Book />
+                      </li>
                       <li></li>
                     </ol>
                   </div>
@@ -31,7 +36,9 @@ class Main extends Component {
                   <h2 className="bookshelf-title">Read</h2>
                   <div className="bookshelf-books">
                     <ol className="books-grid">
-                      <li></li>
+                      <li>
+                        <Book />
+                      </li>
                       <li></li>
                       <li></li>
                     </ol>
