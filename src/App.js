@@ -20,7 +20,7 @@ class BooksApp extends React.Component {
     return (
       <div className="app">
         <Search />
-        <Main bookCollection={this.props.allBooks} />
+        <Main bookCollection={this.state.allBooks} />
       </div>
     )
   }
