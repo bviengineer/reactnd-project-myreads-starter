@@ -1,8 +1,7 @@
 import React from 'react';
 import Search from './Search.js';
 import Main from './Main.js';
-
-// import * as BooksAPI from './BooksAPI'
+import * as BooksAPI from './BooksAPI'
 import './App.css'
 
 class BooksApp extends React.Component {
@@ -11,8 +10,8 @@ class BooksApp extends React.Component {
   }
 
   componentDidMount(){
-    ContactsAPI.getAll().then((books) => {
-      this.setState({ books })
+    BooksAPI.getAll().then((books) => {
+      this.setState({ books: books })
     })
   }
 
