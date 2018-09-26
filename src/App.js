@@ -6,20 +6,21 @@ import './App.css'
 
 class BooksApp extends React.Component {
   state = {
-    books: []
+    allBooks: []
   }
 
+  //Fetch all books from BooksAPI and add them to the books array
   componentDidMount(){
-    BooksAPI.getAll().then((books) => {
-      this.setState({ books: books })
+    BooksAPI.getAll().then((allBooks) => {
+      this.setState({ allBooks: allBooks })
     })
   }
-
   render() {
+    console.log(this.state.allBooks); //print books fetched
     return (
       <div className="app">
         <Search />
-        <Main />
+        <Main bookCollection={this.props.allBooks} />
       </div>
     )
   }

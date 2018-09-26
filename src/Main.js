@@ -3,6 +3,7 @@ import Book from './Book.js';
 
 class Main extends Component {
     render(){
+      console.log(this.props.bookCollection); //print books fetched
         return(
             <div className="list-books">
             <div className="list-books-title">
