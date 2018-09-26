@@ -6,8 +6,6 @@ import Main from './Main.js';
 import './App.css'
 
 class BooksApp extends React.Component {
-  
-  }
 
   render() {
     return (
