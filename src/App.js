@@ -6,6 +6,15 @@ import Main from './Main.js';
 import './App.css'
 
 class BooksApp extends React.Component {
+  state = {
+    books: []
+  }
+
+  componentDidMount(){
+    ContactsAPI.getAll().then((books) => {
+      this.setState({ books })
+    })
+  }
 
   render() {
     return (
