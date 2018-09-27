@@ -63,7 +63,7 @@ class Main extends Component {
                           <li key={allBooks.id}>
                             <Book 
                               book={allBooks} 
-                              shelfChange={this.props.updateShelf}
+                              updateShelf={this.props.updateShelf}
                             />
                           </li>
                       ))
