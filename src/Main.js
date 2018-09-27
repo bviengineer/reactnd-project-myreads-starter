@@ -25,9 +25,18 @@ class Main extends Component {
                   <h2 className="bookshelf-title">Want to Read</h2>
                   <div className="bookshelf-books">
                     <ol className="books-grid">
-                      <li>
+                    {
+                      this.props.bookCollection
+                        .filter(allBooks => allBooks.shelf === "wantToRead")
+                        .map(allBooks => (
+                          <li key={allBooks.id}>
+                            <Book />
+                          </li>
+                      ))
+                    }
+                      {/* <li>
                         <Book />
-                      </li>
+                      </li> */}
                     </ol>
                   </div>
                 </div>
