@@ -15,12 +15,21 @@ class BooksApp extends React.Component {
       this.setState({ allBooks: allBooks })
     })
   }
+
+  //Update shelves for each book
+  updateShelf = () => {
+
+  }
+
   render() {
-    console.log(this.state.allBooks); //print books fetched
+    //console.log(this.state.allBooks); //print books fetched
     return (
       <div className="app">
         <Search />
-        <Main bookCollection={this.state.allBooks} />
+        <Main 
+          bookCollection={this.state.allBooks} 
+          updateShelf={this.updateShelf}  
+        />
       </div>
     )
   }

@@ -20,7 +20,10 @@ class Main extends Component {
                         .filter(allBooks => allBooks.shelf === "currentlyReading")
                         .map(allBooks => (
                           <li key={allBooks.id}>
-                            <Book book={allBooks} />
+                            <Book 
+                              book={allBooks} 
+                              shelfChange={this.props.updateShelf}
+                            />
                           </li>
                       ))
                     }
@@ -36,7 +39,10 @@ class Main extends Component {
                         .filter(allBooks => allBooks.shelf === "wantToRead")
                         .map(allBooks => (
                           <li key={allBooks.id}>
-                            <Book book={allBooks} />
+                            <Book 
+                              book={allBooks} 
+                              shelfChange={this.props.updateShelf}  
+                            />
                           </li>
                       ))
                     }
@@ -55,7 +61,10 @@ class Main extends Component {
                         .filter(allBooks => allBooks.shelf === "read")
                         .map(allBooks => (
                           <li key={allBooks.id}>
-                            <Book book={allBooks} />
+                            <Book 
+                              book={allBooks} 
+                              shelfChange={this.props.updateShelf}
+                            />
                           </li>
                       ))
                     }
