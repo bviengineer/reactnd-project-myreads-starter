@@ -23,6 +23,7 @@ class Main extends Component {
                             <Book 
                               book={allBooks} 
                               updateShelf={this.props.updateShelf}
+                              activeShelf="currentlyReading"
                             />
                           </li>
                       ))
@@ -41,7 +42,8 @@ class Main extends Component {
                           <li key={allBooks.id}>
                             <Book 
                               book={allBooks} 
-                              updateShelf={this.props.updateShelf}  
+                              updateShelf={this.props.updateShelf}
+                              activeShelf="wantToRead"  
                             />
                           </li>
                       ))
@@ -64,6 +66,7 @@ class Main extends Component {
                             <Book 
                               book={allBooks} 
                               updateShelf={this.props.updateShelf}
+                              activeShelf="read"
                             />
                           </li>
                       ))
