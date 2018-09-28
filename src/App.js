@@ -19,6 +19,10 @@ class BooksApp extends React.Component {
   //Update shelves for each shelf type 
   updateShelf = (book, shelf) => {
     BooksAPI.update(book, shelf)
+
+    BooksAPI.getAll().then((allBooks) => {
+      this.setState({ allBooks: allBooks })
+    })
   }
 
   render() {
