@@ -7,7 +7,7 @@ class Search extends Component {
     }
     updateQuery = (query) => {
         this.setState({
-            query: query.trim()
+            query: query
         })
     }
     getSearchedBooks = () => {
@@ -29,7 +29,7 @@ class Search extends Component {
                     */}
                         <input type="text" 
                             placeholder="Search by title or author" 
-                            value={this.state.query
+                            value={this.state.query}
                             onChange={(e) => this.updateQuery(e.target.value)}/>
                     </div>
                 </div>
