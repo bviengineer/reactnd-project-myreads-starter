@@ -3,15 +3,17 @@ import React, {Component } from 'react';
 class Search extends Component {
     state = {
         query: "", 
-        searchedBook: []
+        searchedBooks: []
     }
     updateQuery = (query) => {
         this.setState({
             query: query
         })
     }
-    getSearchedBooks = () => {
-
+    getSearchedBooks = (query) => {
+        BooksAPI.search(query).then((searchedBooks) => {
+            this.setState({ searchedBooks: searchedBooks })
+        })
     }
     render(){
         return( 
