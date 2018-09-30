@@ -79,7 +79,7 @@ class Main extends Component {
             </div>
             <div className="open-search">
               <Link 
-                to="/Search.js"
+                to="/Search"
               >             
                 Add a book
               </Link>
