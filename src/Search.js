@@ -1,23 +1,37 @@
 import React, {Component } from 'react';
-import Book from './Book';
-import * as BooksAPI from './BooksAPI';
+// import Book from './Book';
+// import * as BooksAPI from './BooksAPI';
+// import escapeRegExp from 'escape-string-regexp';
 
 class Search extends Component {
     state = {
         query: "", 
-        searchedBooks: []
+        // searchedBooks: [] //array for books returned from search
     }
+
     updateQuery = (query) => {
         this.setState({
             query: query
         })
+        // this.updateSearchedBooks(query)
     }
-    getSearchedBooks = (query) => {
-        BooksAPI.search(query).then((searchedBooks) => {
-            this.setState({ searchedBooks: searchedBooks })
-        })
-    }
-    render(){
+
+    // updateSearchedBooks = (query) => {
+    //     if(query){
+    //         BooksAPI.search(query).then((searchedBooks) => {             
+    //             if(searchedBooks.error){
+    //                 this.setState({ searchedBooks: [] });    
+    //             } else {
+    //                 this.setState({ searchedBooks: searchedBooks });
+    //             }
+    //             // this.setState({ searchedBooks: searchedBooks })
+    //         })
+    //     } else {
+    //         this.setState({ searchedBooks: [] });
+    //     }
+    
+    // }
+    render(){ 
         return( 
             <div className="search-books">
                 <div className="search-books-bar">
@@ -31,14 +45,22 @@ class Search extends Component {
                 </div>
             <div className="search-books-results">
               <ol className="books-grid">
-                { this.state.searchedBooks.map(searchedBook => (
+                {/* {this.state.searchedBooks.map(searchedBook => { 
+                    let shelf = "none";
+
+                    this.props.books.map(book => (
+                        book.id === searchedBook.id ? shelf = book.shelf: "none"    
+                    ));
+
+                    return
                     <li key={searchedBook.id}>
                         <Book 
-                            book={searchedBook}
+                            individualBook={searchedBook}
+                            updateShelfForBook={this.props.updateShelf}
                         />
                     </li>
                 ))
-                }
+                } */}
               </ol>
             </div>
           </div>
@@ -47,6 +69,3 @@ class Search extends Component {
 } //closing curly brace for Search Component
 
 export default Search;
-
-
-

@@ -2,7 +2,8 @@ import React, {Component } from 'react';
 
 class Book extends Component {
     render(){
-		const imgThumbnail = this.props.book.imageLinks.thumbnail ? this.props.book.imageLinks.thumbnail : "";
+		// eslint-disable-next-line	
+		// let imgThumbnail = this.props.book.imageLinks.thumbnail ? this.props.book.imageLinks.thumbnail : "";
         return(
           <div className="book">
             <div className="book-top">
