@@ -5,6 +5,7 @@ Debra Castiglioni: https://github.com/DebBugging/reactnd-project-myreads-starter
 */
 
 import React, {Component } from 'react';
+import { Link } from 'react-router-dom';
 import Book from './Book';
 import * as BooksAPI from './BooksAPI';
 // import escapeRegExp from 'escape-string-regexp';
@@ -40,8 +41,13 @@ class Search extends Component {
         return( 
             <div className="search-books">
                 <div className="search-books-bar">
-                    <a className="close-search" onClick={() => this.setState({ showSearchPage: false })}>Close</a>
-                    <div className="search-books-input-wrapper">
+										{/* React router implementation */}
+										<Link 
+											className="close-search"
+											to="/"
+										>Close</Link>
+                    
+										<div className="search-books-input-wrapper">
 											<input type="text" 
 												placeholder="Search by title or author" 
 												value={this.state.query}
@@ -64,7 +70,7 @@ class Search extends Component {
 													moveBooks={shelf}
 												/>
 											</li>
-										);
+										);	
 									})}
               </ol>
             </div>
