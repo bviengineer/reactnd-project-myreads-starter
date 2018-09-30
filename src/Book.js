@@ -2,12 +2,11 @@ import React, {Component } from 'react';
 
 class Book extends Component {
     render(){
-		// eslint-disable-next-line	
-		// let imgThumbnail = this.props.book.imageLinks.thumbnail ? this.props.book.imageLinks.thumbnail : "";
+		let imgThumbnail = this.props.book.imageLinks ? this.props.book.imageLinks.thumbnail : "";
         return(
           <div className="book">
             <div className="book-top">
-				<div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${this.props.book.imageLinks.thumbnail}")` }}></div>
+							<div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${imgThumbnail}")` }}></div>
 				<div className="book-shelf-changer">
 				<select onChange = { (e) => this.props.updateShelf(this.props.book, e.target.value)}
 				value={this.props.activeShelf} //highlights which shelf a book is on from the drop down menu
