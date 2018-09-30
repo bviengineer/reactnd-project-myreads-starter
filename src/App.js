@@ -29,7 +29,9 @@ class BooksApp extends React.Component {
     //console.log(this.state.allBooks); //print books fetched
     return (
       <div className="app">
-        <Search />
+        <Search 
+          updateShelf={this.updateShelf}
+        />
         <Main 
           bookCollection={this.state.allBooks} 
           updateShelf={this.updateShelf}  

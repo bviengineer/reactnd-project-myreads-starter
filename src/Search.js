@@ -60,7 +60,7 @@ class Search extends Component {
 											<li key={searchBook.id}>
 												<Book 
 													book={searchBook}
-													changeShelf={this.props.changeShelf}
+													updateShelf={this.props.updateShelf}
 													moveBooks={shelf}
 												/>
 											</li>
