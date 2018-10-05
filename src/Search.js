@@ -41,7 +41,7 @@ class Search extends Component {
 					<div className="search-books">
 							<div className="search-books-bar">
 				
-				{/* React router implementation - returns to main page */}
+				{/* React router link implementation - returns to main page */}
 				<Link 
 					className="close-search"
 					to="/">Close</Link>
@@ -58,6 +58,11 @@ class Search extends Component {
 			{
 				this.state.searchBooks.map((searchBook) => {
 					let shelf = "none";
+					
+					this.props.books.map(book => (
+						book.id === searchBook.id ? shelf = book.shelf : ""
+					));
+					
 					return(
 						<li key={searchBook.id}>
 							<Book 
