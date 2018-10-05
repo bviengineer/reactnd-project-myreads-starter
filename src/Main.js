@@ -77,10 +77,10 @@ class Main extends Component {
                 </div>
               </div>
             </div>
+            {/* links to search page-managed by react router link method*/}
             <div className="open-search">
               <Link 
-                to="/Search"
-              >             
+                to="/Search">             
                 Add a book
               </Link>
             </div>

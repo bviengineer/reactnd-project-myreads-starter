@@ -8,12 +8,11 @@ import React, {Component } from 'react';
 import { Link } from 'react-router-dom';
 import Book from './Book';
 import * as BooksAPI from './BooksAPI';
-// import escapeRegExp from 'escape-string-regexp';
 
 class Search extends Component {
     state = {
         query: "", 
-        searchBooks: [] //array for books returned from search
+        searchBooks: [] //will hold books returned from user search
     }
 
     updateQuery = (query) => {
@@ -41,7 +40,8 @@ class Search extends Component {
 			return( 
 					<div className="search-books">
 							<div className="search-books-bar">
-				{/* React router implementation */}
+				
+				{/* React router implementation - returns to main page */}
 				<Link 
 					className="close-search"
 					to="/">Close</Link>
@@ -56,13 +56,16 @@ class Search extends Component {
 					<div className="search-books-results">
 						<ol className="books-grid">
 			{
-				this.state.searchBooks.map((searchBook) => 
-					<li key={searchBook.id}>
+				this.state.searchBooks.map((searchBook) => {
+					return(
+						<li key={searchBook.id}>
 							<Book 
 								book={searchBook}
 								updateShelf={this.props.updateShelf} />
-					</li>	
-				)}
+						</li>
+					); //closing brace for nested return
+				}) //closing braces for map method
+				}
 						</ol>
 					</div>
 				</div>
