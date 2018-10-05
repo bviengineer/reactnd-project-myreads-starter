@@ -1,7 +1,7 @@
 /*
-Credit:
-Maeva: https://www.youtube.com/watch?v=i6L2jLHV9j8&index=39&list=PLCDXYWEHWgppmc0TJlQJLu3EQJ2Lka7lg&t=3600s
-Debra Castiglioni: https://github.com/DebBugging/reactnd-project-myreads-starter/blob/master/src/Search.js
+	Credit:
+	Maeva NAP walkthrough was instrumental during the development of this project: 
+	https://www.youtube.com/watch?v=i6L2jLHV9j8&index=39&list=PLCDXYWEHWgppmc0TJlQJLu3EQJ2Lka7lg&t=3600s
 */
 
 import React, {Component } from 'react';

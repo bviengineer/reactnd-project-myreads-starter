@@ -1,3 +1,9 @@
+/*
+	Credit:
+	Maeva NAP walkthrough was instrumental during the development of this project: 
+	https://www.youtube.com/watch?v=i6L2jLHV9j8&index=39&list=PLCDXYWEHWgppmc0TJlQJLu3EQJ2Lka7lg&t=3600s
+*/
+
 import React from 'react';
 import { Route } from 'react-router-dom';
 import Search from './Search.js';
