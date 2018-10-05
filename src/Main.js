@@ -81,7 +81,7 @@ render(){
     </div>
   </div>
   
-  {/* will manage route search page */}
+  {/* will manage route to the search page */}
   <div className="open-search">
     <Link 
       to="/Search">             
