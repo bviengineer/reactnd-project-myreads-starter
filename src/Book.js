@@ -11,7 +11,7 @@ class Book extends Component {
 							<div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${imgThumbnail}")` }}></div>
 								<div className="book-shelf-changer">
 								<select onChange = { (e) => this.props.updateShelf(this.props.book, e.target.value)}
-								value={this.props.activeShelf} //highlights which shelf a book is on from the drop down menu
+								value={this.props.activeShelf} //highlights which shelf a book is on while on the search page
 				> 
 					<option value="move" disabled>Move to...</option>
 					<option value="currentlyReading">Currently Reading</option>

@@ -57,11 +57,13 @@ class Search extends Component {
 						<ol className="books-grid">
 			{
 				this.state.searchBooks.map((searchBook) => {
+					let shelf = "none";
 					return(
 						<li key={searchBook.id}>
 							<Book 
 								book={searchBook}
-								updateShelf={this.props.updateShelf} />
+								updateShelf={this.props.updateShelf} 
+								activeShelf={shelf} />
 						</li>
 					); //closing brace for nested return
 				}) //closing braces for map method
