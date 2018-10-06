@@ -1,6 +1,8 @@
 # MyReads Project
 This web application allows users to search for, and select, books. The books can be placed on different shelves by being tagged with one of several specified statuses: "Currently Reading", "Want to Read", and "Read". Users can move books between shelves and remove books from shelves by selecting a tag of "None".
 
+The user interface for MyReads, was built using React and is part of the Udacity Front End Nanodegree, project work. A code base was provided and developed upon.
+
 ## Credits
 [Maeva NAP Walkthrough](hhttps://youtu.be/i6L2jLHV9j8) was instrumental during the development of this project.
 
