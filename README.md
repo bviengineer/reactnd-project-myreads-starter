@@ -6,7 +6,7 @@ The user interface for MyReads, was built using React and is part of the Udacity
 # View Project
 * Clone the repository
 * Using your command prompt (CLI), navigate to the project directory
-* Install [node package manager (npm)](https://nodejs.org/en/). Note, npm is installed when node is installed.
+* Install [node package manager (npm)](https://nodejs.org/en/). Note, npm is automatically installed during the installation of node.
   * To determine if you already have node and npm installed, go to your command prompt and check the version:
     * node -v
     * npm -v 
