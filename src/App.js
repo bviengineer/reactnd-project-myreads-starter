@@ -1,7 +1,12 @@
 /*
-	Credit:
-	Maeva NAP walkthrough was instrumental during the development of this project: 
-	https://www.youtube.com/watch?v=i6L2jLHV9j8&index=39&list=PLCDXYWEHWgppmc0TJlQJLu3EQJ2Lka7lg&t=3600s
+  CREDITS:
+	  1. Maeva NAP walkthrough was instrumental during the development of this project: 
+    https://www.youtube.com/watch?v=i6L2jLHV9j8&index=39&list=PLCDXYWEHWgppmc0TJlQJLu3EQJ2Lka7lg&t=3600s
+    
+    2. Learn ReactJS: Part1 on CodeCademy was beneficial in understanding how ReactJS works. 
+
+  PURPOSE of BooksApp:
+    BooksApp is composed of, and renders the Main and Search compnents, and handles the loading or mounting of books to their respetive shelves, in addition to the moving of books between shelves.  
 */
 
 import React from 'react';
@@ -33,16 +38,19 @@ class BooksApp extends React.Component {
   }
 
   render() {
-    //console.log(this.state.allBooks); //print books fetched
     return (
       <div className="app">
+
+      {/* Handles routing to the index page */}
         <Route exact path="/" render={() => (
           <Main 
             bookCollection={this.state.allBooks} 
             updateShelf={this.updateShelf}  
           />
         )} />
-        <Route path="/Search" render={() => (
+
+        {/* Handles routing to the search page   */}
+        <Route path="/Search" render={() => ( 
           <Search 
             updateShelf={this.updateShelf}
             books={this.state.allBooks}
