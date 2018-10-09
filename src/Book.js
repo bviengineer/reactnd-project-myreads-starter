@@ -1,3 +1,14 @@
+/*
+  CREDITS:
+	  1. Maeva NAP walkthrough was instrumental during the development of this project: 
+    https://www.youtube.com/watch?v=i6L2jLHV9j8&index=39&list=PLCDXYWEHWgppmc0TJlQJLu3EQJ2Lka7lg&t=3600s
+    
+    2. Learn ReactJS: Part1 on CodeCademy was beneficial in understanding how ReactJS works. 
+
+  PURPOSE of Book.js:
+    Book.js handles the user shelf selection after the search results have been returned.  
+*/
+
 import React, {Component } from 'react';
 
 class Book extends Component {

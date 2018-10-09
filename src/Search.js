@@ -1,9 +1,20 @@
-import React, {Component } from 'react';
+/*
+  CREDITS:
+	  1. Maeva NAP walkthrough was instrumental during the development of this project: 
+    https://www.youtube.com/watch?v=i6L2jLHV9j8&index=39&list=PLCDXYWEHWgppmc0TJlQJLu3EQJ2Lka7lg&t=3600s
+    
+    2. Learn ReactJS: Part1 on CodeCademy was beneficial in understanding how ReactJS works. 
+
+  PURPOSE of Search.js:
+    As the name suggests, Search.js manages the search for books and handles any error should any arise during the search process.
+*/
+
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Book from './Book.js';
 import * as BooksAPI from './BooksAPI';
 
-class Search extends Component {
+class Search extends React.Component {
 	state = {
 		query: "", 
 		searchBooks: [] //will hold books returned from user search

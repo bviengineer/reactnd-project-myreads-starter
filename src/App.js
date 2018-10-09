@@ -5,8 +5,8 @@
     
     2. Learn ReactJS: Part1 on CodeCademy was beneficial in understanding how ReactJS works. 
 
-  PURPOSE of BooksApp:
-    BooksApp is composed of, and renders the Main and Search compnents, and handles the loading or mounting of books to their respetive shelves, in addition to the moving of books between shelves.  
+  PURPOSE of App.js:
+    App.js is composed of, and renders the Main and Search compnents, and handles the loading or mounting of books to their respetive shelves, in addition to the moving of books between shelves.  
 */
 
 import React from 'react';
