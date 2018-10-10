@@ -9,9 +9,9 @@
     Book.js handles the user shelf selection after the search results have been returned.  
 */
 
-import React, {Component } from 'react';
+import React from 'react';
 
-class Book extends Component {
+class Book extends React.Component {
 	render(){
 	//if a book image does not exist, will display a blank space
 		let imgThumbnail = this.props.book.imageLinks ? this.props.book.imageLinks.thumbnail : "";
