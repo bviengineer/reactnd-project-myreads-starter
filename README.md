@@ -18,7 +18,7 @@ The user interface for MyReads, was built using React and is part of the Udacity
 [Maeva NAP Walkthrough](https://youtu.be/i6L2jLHV9j8) was instrumental during the development of this project.
 
 ## Backend Server
-The backend server is used develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods needed to perform necessary operations on the backend:
+The backend server is used to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods needed to perform necessary operations on the backend:
 
 * [`getAll`](#getall)
 * [`update`](#update)
