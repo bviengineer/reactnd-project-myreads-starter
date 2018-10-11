@@ -11,18 +11,17 @@
 
 import React from 'react';
 
-class Book extends React.Component {
-	render(){
+function Book(props){
 	//if a book image does not exist, will display a blank space
-		let imgThumbnail = this.props.book.imageLinks ? this.props.book.imageLinks.thumbnail : "";
+	let imgThumbnail = props.book.imageLinks ? props.book.imageLinks.thumbnail : "";
 
 		return(
 				<div className="book">
 					<div className="book-top">
 						<div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${imgThumbnail}")` }}></div>
 							<div className="book-shelf-changer">
-							<select onChange = { (e) => this.props.updateShelf(this.props.book, e.target.value)}
-								value={this.props.activeShelf} //highlights which shelf a book is on while on the search page
+							<select onChange = { (e) => props.updateShelf(props.book, e.target.value)}
+								value={props.activeShelf} //highlights which shelf a book is on while on the search page
 							> {/* closing angle bracket for select element */}
 				<option value="move" disabled>Move to...</option>
 				<option value="currentlyReading">Currently Reading</option>
@@ -32,11 +31,10 @@ class Book extends React.Component {
 			</select>
 			</div>
 					</div>
-					<div className="book-title">{this.props.book.title}</div>
-					<div className="book-authors">{this.props.book.authors}</div>
+					<div className="book-title">{props.book.title}</div>
+					<div className="book-authors">{props.book.authors}</div>
 				</div>
 		);
 	}
-}
 
 export default Book;
