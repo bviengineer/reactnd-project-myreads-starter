@@ -37,7 +37,7 @@ class BooksApp extends React.Component {
   //Thank you to Amanda Hasenzahl (AmandaH) for her assistance on the efficieny in the changing of shelves  
   //Update shelves for each shelf type 
   updateShelf = (book, shelf) => {
-    BooksAPI.update(book, shelf).then((book) => {
+    BooksAPI.update(book, shelf).then( ()=> {
       this.stateUpdate();
     });
 }
