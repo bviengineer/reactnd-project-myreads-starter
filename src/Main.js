@@ -11,10 +11,10 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Book } from "./Book.js";
 import { CurrentReads } from './currentReads.js';
 import { DesiredReads } from './desiredReads.js';
 import { Reads } from './reads.js';
+
 
 //Rendering in App.js
 class Main extends React.Component {
