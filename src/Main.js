@@ -11,6 +11,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Book } from "./Book.js";
 import { CurrentReads } from './currentReads.js';
 import { DesiredReads } from './desiredReads.js';
 import { Reads } from './reads.js';
@@ -25,12 +26,11 @@ render(){
       </div>
       <div className="list-books-content">
         <div>
-          <CurrentReads bookCollection={this.props.bookCollection}/>
-          <DesiredReads bookCollection={this.props.bookCollection}/>
-          <Reads bookCollection={this.props.bookCollection}/>
+          <CurrentReads updateShelf={this.props.updateShelf} bookCollection={this.props.bookCollection}/>
+          <DesiredReads updateShelf={this.props.updateShelf} bookCollection={this.props.bookCollection}/>
+          <Reads updateShelf={this.props.updateShelf} bookCollection={this.props.bookCollection}/>
         </div>
-      </div>      
-  
+      </div>  
   {/* Will manage navigation to the search page */}
   <div className="open-search">
     <Link 
