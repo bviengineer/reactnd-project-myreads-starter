@@ -12,7 +12,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Book from './Book.js';
-import * as BooksAPI from './BooksAPI';
+import * as API from './BooksAPI';
 
 class Search extends React.Component {
 	state = {
@@ -29,7 +29,7 @@ class Search extends React.Component {
 
 	updateBookSearch = query => {
 	if(query) {
-		BooksAPI.search(query).then(searchBooks => {
+		API.search(query).then(searchBooks => {
 			if(searchBooks.error) {
 				this.setState({ searchBooks: [] });
 			} else {
