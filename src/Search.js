@@ -14,26 +14,32 @@ import { Link } from 'react-router-dom';
 import { Book } from './Book.js';
 import * as API from './BooksAPI';
 
-class Search extends React.Component {
-	state = {
-		query: "", 
-		searchBooks: [] //will hold books returned from user search
+
+//Rendering in App.js
+export class Search extends React.Component {
+	constructor(props){
+		super(props);
+		
+		this.state = { 
+			query: "", 
+			searchBooks: [] //will hold books returned from user search
+		}
 	}
 
-	updateQuery = (query) => {
+	updateQuery = (userQuery) => {
 		this.setState({
-				query: query
+				query: userQuery
 		})
-		this.updateBookSearch(query)
+		this.updateBookSearch(userQuery)
 	}
 
-	updateBookSearch = query => {
-	if(query) {
-		API.search(query).then(searchBooks => {
-			if(searchBooks.error) {
+	updateBookSearch = (userQuery) => {
+	if(userQuery) {
+		API.search(userQuery).then(booksResult => {
+			if(booksResult.error) {
 				this.setState({ searchBooks: [] });
 			} else {
-				this.setState({ searchBooks: searchBooks })
+				this.setState({ searchBooks: booksResult })
 			}        
 		})
 	} else {
@@ -59,20 +65,21 @@ class Search extends React.Component {
 						onChange={(e) => this.updateQuery(e.target.value)} />
 				</div>
 			</div>
+
 			<div className="search-books-results">
 				<ol className="books-grid">
 			
-			{ this.state.searchBooks.map((searchBook) => {
+				{this.state.searchBooks.map((theBooks) => {
 					let shelf = "none";
 					
 					this.props.books.map(book => (
-						book.id === searchBook.id ? shelf = book.shelf : ""
+						book.id === theBooks.id ? shelf = book.shelf : ""
 					));
 					
 					return(
-						<li key={searchBook.id}>
+						<li key={theBooks.id}>
 							<Book 
-								book={searchBook}
+								book={theBooks}
 								updateShelf={this.props.updateShelf} 
 								activeShelf={shelf} />
 						</li>
@@ -81,9 +88,7 @@ class Search extends React.Component {
 				}
 						</ol>
 					</div>
-				</div>
+			</div>
 			); //closing bracket for return
 	} //close curly brace for render()
 } //closing curly brace for Search Component
-
-export default Search;
