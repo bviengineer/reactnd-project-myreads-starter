@@ -50,7 +50,7 @@ class BooksApp extends React.Component {
         <Route exact path="/" render={() => (
           <Main 
             bookCollection={this.state.allBooks} 
-            updateShelf={this.updateShelf}  
+            updateShelf={this.updateShelf} 
           />
         )} />
 
