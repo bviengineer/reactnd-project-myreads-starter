@@ -12,6 +12,7 @@
 import React from 'react';
 
 
+//Rendering in Search.js, Main.js
 export const Book = (props) => {	
 	//if a book image does not exist, will display a blank space
 	let imgThumbnail = props.book.imageLinks ? props.book.imageLinks.thumbnail : "";
