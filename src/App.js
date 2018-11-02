@@ -23,14 +23,14 @@ class BooksApp extends React.Component {
 
   //Fetch all books from BooksAPI and add them to the books array
   componentDidMount(){
-    BooksAPI.getAll().then((allBooks) => {
-      this.setState({ allBooks: allBooks })
+    BooksAPI.getAll().then((data) => {
+      this.setState({ allBooks: data})
     })
   }
 
   stateUpdate(){  
-    BooksAPI.getAll().then((allBooks) => {
-        this.setState({ allBooks: allBooks })
+    BooksAPI.getAll().then((data) => {
+        this.setState({ allBooks: data })
       })
   }
 
