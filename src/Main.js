@@ -17,19 +17,18 @@ import { Reads } from './reads.js';
 
 
 //Rendering in App.js
-export class Main extends React.Component {
-render(){
-  return(
+export const Main = (props) => {
+ return(
     <div className="list-books">
       <div className="list-books-title">
         <h1>MyReads</h1>
       </div>
       <div className="list-books-content">
         <div> 
-          {/* Shelves */}
-          <CurrentReads updateShelf={this.props.updateShelf} bookCollection={this.props.bookCollection}/>
-          <DesiredReads updateShelf={this.props.updateShelf} bookCollection={this.props.bookCollection}/>
-          <Reads updateShelf={this.props.updateShelf} bookCollection={this.props.bookCollection}/>
+          {/* Book Shelves */}
+          <CurrentReads shelfName="Currently Reading" updateShelf={props.updateShelf} bookCollection={props.bookCollection}/>
+          <DesiredReads shelfName="Want To Read" updateShelf={props.updateShelf} bookCollection={props.bookCollection}/>
+          <Reads shelfName="Read" updateShelf={props.updateShelf} bookCollection={props.bookCollection}/>
         </div>
       </div>  
   {/* Will manage navigation to the search page */}
@@ -41,5 +40,4 @@ render(){
     </div>
 </div>
   );
-}
 }
