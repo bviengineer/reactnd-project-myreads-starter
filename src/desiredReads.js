@@ -6,7 +6,7 @@ export class DesiredReads extends React.Component{
   render(){
     return(
       <div className="bookshelf">
-        <h2 className="bookshelf-title">Want to Read</h2>
+        <h2 className="bookshelf-title">{this.props.shelfName}</h2>
         <div className="bookshelf-books">
           <ol className="books-grid">
            {this.props.bookCollection.filter(allBooks => allBooks.shelf === "wantToRead").map(allBooks => (

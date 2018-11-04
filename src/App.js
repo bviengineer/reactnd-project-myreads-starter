@@ -13,26 +13,26 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import { Search } from './Search.js';
 import { Main } from './Main.js';
-import * as BooksAPI from './BooksAPI'
+import * as API from './BooksAPI'
 import './App.css'
 
 class BooksApp extends React.Component {
-  constrctor(props){
+  constructor(props){
     super(props);
-    state = {
+    this.state = {
       allBooks: []
     }
   }
 
   //Fetch all books from BooksAPI and add them to the books array
   componentDidMount(){
-    BooksAPI.getAll().then((data) => {
+    API.getAll().then((data) => {
       this.setState({ allBooks: data})
     })
   }
 
   stateUpdate(){  
-    BooksAPI.getAll().then((data) => {
+    API.getAll().then((data) => {
         this.setState({ allBooks: data })
       })
   }
@@ -40,7 +40,7 @@ class BooksApp extends React.Component {
   //Thank you to Amanda Hasenzahl (AmandaH) for her assistance on the efficieny in the changing of shelves  
   //Update shelves for each shelf type 
   updateShelf = (book, shelf) => {
-    BooksAPI.update(book, shelf).then( ()=> {
+    API.update(book, shelf).then( ()=> {
       this.stateUpdate();
     });
 }
