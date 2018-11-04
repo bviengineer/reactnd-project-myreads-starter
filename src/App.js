@@ -12,13 +12,16 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import { Search } from './Search.js';
-import Main from './Main.js';
+import { Main } from './Main.js';
 import * as BooksAPI from './BooksAPI'
 import './App.css'
 
 class BooksApp extends React.Component {
-  state = {
-    allBooks: []
+  constrctor(props){
+    super(props);
+    state = {
+      allBooks: []
+    }
   }
 
   //Fetch all books from BooksAPI and add them to the books array
@@ -65,9 +68,3 @@ class BooksApp extends React.Component {
 }
 
 export default BooksApp
-
-/* 
-Things to look over
-  1. 
-
-*/
