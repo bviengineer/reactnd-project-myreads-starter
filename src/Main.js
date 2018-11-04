@@ -17,27 +17,29 @@ import { Reads } from './reads.js';
 
 
 //Rendering in App.js
-export const Main = (props) => {
- return(
-    <div className="list-books">
-      <div className="list-books-title">
-        <h1>MyReads</h1>
+export class Main extends React.Component {
+  componentDidMout(){
+    console.log(this);
+  }
+
+
+  render(){
+    return(
+      <div className="list-books">
+        <div className="list-books-title"> <h1>MyReads</h1> </div>
+        <div className="list-books-content">
+          <div> 
+            {/* Book Shelves */}
+            <CurrentReads shelfName="Currently Reading" update Shelf={this.props.updateShelf} bookCollection={this.props.bookCollection}/>
+            <DesiredReads shelfName="Want To Read" updateShelf={this.props.updateShelf} bookCollection={this.props.bookCollection}/>
+            <Reads shelfName="Read" updateShelf={this.props.updateShelf} bookCollection={this.props.bookCollection}/>
+          </div>
+        </div>  
+        {/* Will manage navigation to the search page */}
+      <div className="open-search">
+        <Link to="/Search"> Add a book </Link>
       </div>
-      <div className="list-books-content">
-        <div> 
-          {/* Book Shelves */}
-          <CurrentReads shelfName="Currently Reading" updateShelf={props.updateShelf} bookCollection={props.bookCollection}/>
-          <DesiredReads shelfName="Want To Read" updateShelf={props.updateShelf} bookCollection={props.bookCollection}/>
-          <Reads shelfName="Read" updateShelf={props.updateShelf} bookCollection={props.bookCollection}/>
-        </div>
-      </div>  
-  {/* Will manage navigation to the search page */}
-  <div className="open-search">
-    <Link 
-      to="/Search">             
-      Add a book
-    </Link>
     </div>
-</div>
-  );
+    );
+  }
 }
