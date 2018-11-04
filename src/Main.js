@@ -25,7 +25,8 @@ render(){
         <h1>MyReads</h1>
       </div>
       <div className="list-books-content">
-        <div>
+        <div> 
+          {/* Shelves */}
           <CurrentReads updateShelf={this.props.updateShelf} bookCollection={this.props.bookCollection}/>
           <DesiredReads updateShelf={this.props.updateShelf} bookCollection={this.props.bookCollection}/>
           <Reads updateShelf={this.props.updateShelf} bookCollection={this.props.bookCollection}/>
