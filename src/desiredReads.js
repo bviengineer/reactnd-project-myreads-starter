@@ -14,7 +14,7 @@ export class DesiredReads extends React.Component{
                 <Book 
                   book={allBooks} 
                   updateShelf={this.props.updateShelf}
-                  activeShelf="wantToRead" />
+                  activeShelf={this.props.activeShelf} />
               </li>
             ))
           }
