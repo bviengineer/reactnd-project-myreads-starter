@@ -50,16 +50,14 @@ class BooksApp extends React.Component {
         <Route exact path="/" render={() => (
           <Main 
             bookCollection={this.state.allBooks} 
-            updateShelf={this.updateShelf} 
-          />
+            updateShelf={this.updateShelf} />
         )} />
 
-        {/* Handles routing to the search page   */}
+        {/* Handles routing to the search page */}
         <Route path="/Search" render={() => ( 
           <Search 
             updateShelf={this.updateShelf}
-            books={this.state.allBooks}
-          />
+            books={this.state.allBooks} />
         )} />
       </div>
     )
@@ -67,3 +65,9 @@ class BooksApp extends React.Component {
 }
 
 export default BooksApp
+
+/* 
+Things to look over
+  1. 
+
+*/
