@@ -13,7 +13,7 @@ export class CurrentReads extends React.Component {
                   <Book 
                     book={allBooks} 
                     updateShelf={this.props.updateShelf}
-                    activeShelf={this.props.activeShelf} />
+                    activeShelf="currentlyReading" />
                 </li>
               ))
             }
