@@ -17,7 +17,7 @@ import { Reads } from './reads.js';
 
 
 //Rendering in App.js
-class Main extends React.Component {
+export class Main extends React.Component {
 render(){
   return(
     <div className="list-books">
@@ -38,10 +38,8 @@ render(){
       to="/Search">             
       Add a book
     </Link>
-  </div>
+    </div>
 </div>
-); 
+  );
 }
 }
-
-export default Main;
