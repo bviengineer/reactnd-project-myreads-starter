@@ -4,7 +4,7 @@ import { Header } from "./header.js";
 import { CurrentReads } from './currentReads.js';
 import { DesiredReads } from './desiredReads.js';
 import { Reads } from './reads.js';
-//import { AddButton } from "./addButton.js";
+//import { FindBooks } from "./findBooks.js";
 
 
 //Rendering in App.js
@@ -24,7 +24,7 @@ export class Main extends React.Component {
             <Reads shelfName="Read" updateShelf={this.props.updateShelf} bookCollection={this.props.bookCollection}/>
           </div>
         </div>  
-        
+
         {/* Will manage navigation to the search page */}
       <div className="open-search">
         <Link to="/Search"> Add a book </Link>
@@ -33,3 +33,7 @@ export class Main extends React.Component {
     );
   }
 }
+
+/* Will like to
+-Separate Add a book & placed it it findBooks but findBooks is having an error
+*/

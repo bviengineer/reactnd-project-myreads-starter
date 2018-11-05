@@ -19,3 +19,8 @@ export class ChangeShelf extends React.Component{
     );
   }
 }
+
+/*
+Will like to know if having the props being inherited here also needs to be inherited in the component instance where the component ChangeShelf is being rendered
+
+*/

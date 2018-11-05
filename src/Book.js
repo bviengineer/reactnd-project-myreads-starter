@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShelfChanger } from "./shelfChanger.js"
+import { ShelfChanger } from "./ChangeShelf.js"
 
 
 
@@ -18,8 +18,8 @@ export class Book extends React.Component {
 				w`, width: 128, height: 193, backgroundImage: `url("${imgThumbnail}")` }}>
 				</div>
 
-				{/* ShelfChanger Component */}
-				<ShelfChanger book={this.props.book} updateShelf={this.props.updateShelf} activeShelf={this.props.activeShelf}/>
+				{/* ChangeShelf Component */}
+				<ChangeShelf book={this.props.book} updateShelf={this.props.updateShelf} activeShelf={this.props.activeShelf}/>
 			</div>
 			
 			<div className="book-title">{this.props.book.title}</div>
