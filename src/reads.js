@@ -2,6 +2,7 @@ import React from "react";
 import { Book } from "./Book.js"
 
 
+//Rendering in Main.js - shelf for all books marked as read
 export class Reads extends React.Component {
   render(){
   return(

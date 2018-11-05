@@ -1,14 +1,3 @@
-/*
-  CREDITS:
-	  1. Maeva NAP walkthrough was instrumental during the development of this project: 
-    https://www.youtube.com/watch?v=i6L2jLHV9j8&index=39&list=PLCDXYWEHWgppmc0TJlQJLu3EQJ2Lka7lg&t=3600s
-    
-    2. Learn ReactJS: Part1 on CodeCademy was beneficial in understanding how ReactJS works. 
-
-  PURPOSE of Search.js:
-    As the name suggests, Search.js manages the search for books and handles any error should any arise during the search process.
-*/
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Book } from './Book.js';
@@ -57,6 +46,7 @@ export class Search extends React.Component {
 					className="close-search"
 					to="/">Close
 				</Link>
+					
 					{/* Search Bar
 					---Initial state and appearence will be empty
 					---State and appeareance will populate based on user query, if any matches are found */}
@@ -80,7 +70,7 @@ export class Search extends React.Component {
 						3. Otherwise, the shelf will be set to NONE. 
 					*/
 					this.props.books.map(book => (
-						book.id === theBooks.id ? shelf = book.shelf : ""
+						book.id === theBooks.id ? shelf = book.shelf : "none"
 					));
 					
 					return(

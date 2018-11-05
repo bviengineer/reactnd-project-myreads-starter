@@ -2,6 +2,7 @@ import React from "react";
 import { Book } from "./Book.js"
 
 
+//Rendering in Mains.js - shelf for all books marked as Want to Read
 export const DesiredReads = (props) => {
   return(
     <div className="bookshelf">
