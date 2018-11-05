@@ -31,7 +31,7 @@ export class Main extends React.Component {
         <div className="list-books-content">
           <div> 
             {/* Book Shelves */}
-            <CurrentReads shelfName="Currently Reading" update Shelf={this.props.updateShelf} bookCollection={this.props.bookCollection}/>
+            <CurrentReads shelfName="Currently Reading" updateShelf={this.props.updateShelf} bookCollection={this.props.bookCollection}/>
             <DesiredReads shelfName="Want To Read" updateShelf={this.props.updateShelf} bookCollection={this.props.bookCollection}/>
             <Reads shelfName="Read" updateShelf={this.props.updateShelf} bookCollection={this.props.bookCollection}/>
           </div>
