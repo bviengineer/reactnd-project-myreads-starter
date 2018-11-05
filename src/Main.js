@@ -11,22 +11,23 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Header } from "./header.js";
 import { CurrentReads } from './currentReads.js';
 import { DesiredReads } from './desiredReads.js';
 import { Reads } from './reads.js';
+//import { AddButton } from "./addButton.js";
 
 
 //Rendering in App.js
 export class Main extends React.Component {
-  componentDidMout(){
-    console.log(this);
-  }
-
+  // componentDidMout(){
+  //   console.log(this);
+  // }
 
   render(){
     return(
       <div className="list-books">
-        <div className="list-books-title"> <h1>MyReads</h1> </div>
+        <Header /> {/* header component */}
         <div className="list-books-content">
           <div> 
             {/* Book Shelves */}
