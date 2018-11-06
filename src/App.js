@@ -6,7 +6,7 @@ import * as API from './BooksAPI';
 import './App.css';
 
 
-class BooksApp extends React.Component {
+export class BooksApp extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -16,9 +16,7 @@ class BooksApp extends React.Component {
 
   //Fetch all books from BooksAPI and add them to the books array
   componentDidMount(){
-    API.getAll().then((data) => {
-      this.setState({ allBooks: data})
-    })
+    this.stateUpdate();
   }
 
   stateUpdate(){  
@@ -56,5 +54,3 @@ class BooksApp extends React.Component {
     )
   }
 }
-
-export default BooksApp
