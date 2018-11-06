@@ -1,6 +1,6 @@
 import React from 'react';
 import { Book } from './Book.js';
-import { CloseSearch } from "./closeSearch.js";
+import { SearchLibrary } from "./searchLibrary.js";
 import * as API from '../BooksAPI';
 
 
@@ -39,21 +39,9 @@ export class Search extends React.Component {
 	render(){ 
 		return( 
 			<div className="search-books">
-				<div className="search-books-bar">
-				
-				{/* Returns to main page */}
-				<CloseSearch />
-					
-					{/* Search Bar
-					---Initial state and appearence will be empty
-					---State and appeareance will populate based on user query, if any matches are found */}
-				<div className="search-books-input-wrapper">
-					<input type="text" 
-						placeholder="Search by title or author" 
-						value={this.state.query}
-						onChange={(e) => this.updateQuery(e.target.value)} />
-				</div>
-			</div>
+
+				{/* Renders Search Bar */}
+				<SearchLibrary query={this.state.query} updateQuery={this.updateQuery}/>
 
 			<div className="search-books-results">
 				<ol className="books-grid">
