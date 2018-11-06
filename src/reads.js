@@ -10,7 +10,7 @@ export class Reads extends React.Component {
       <h2 className="bookshelf-title">{this.props.shelfName}</h2>
       <div className="bookshelf-books">
         <ol className="books-grid">          
-          {this.props.bookCollection.filter(allBooks => allBooks.shelf === "read").map(allBooks => (
+          {this.props.read.map(allBooks => (
           <li key={allBooks.id}>
             <Book 
               book={allBooks} 

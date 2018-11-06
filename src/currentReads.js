@@ -10,7 +10,7 @@ export const CurrentReads = (props) => {
       <h2 className="bookshelf-title">{props.shelfName}</h2>
         <div className="bookshelf-books">
           <ol className="books-grid">         
-            {props.bookCollection.filter(allBooks => allBooks.shelf === "currentlyReading").map(allBooks => (
+            {props.currentlyReadBooks.map(allBooks => (
               <li key={allBooks.id}>
                 <Book 
                   book={allBooks} 

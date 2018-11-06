@@ -9,7 +9,7 @@ export const DesiredReads = (props) => {
       <h2 className="bookshelf-title">{props.shelfName}</h2>
       <div className="bookshelf-books">
         <ol className="books-grid">
-          {props.bookCollection.filter(allBooks => allBooks.shelf === "wantToRead").map(allBooks => (
+          {props.wantToRead.map(allBooks => (
             <li key={allBooks.id}>
               <Book 
                 book={allBooks} 
