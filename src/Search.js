@@ -86,13 +86,6 @@ export class Search extends React.Component {
 						</ol>
 					</div>
 			</div>
-			); //closing bracket for return
-	} //close curly brace for render()
-} //closing curly brace for Search Component
-
-
-/* Will like to:
--Refactor
--Simplify
--Modify queries
-*/
+			);
+	} 
+}
