@@ -15,6 +15,7 @@ export class Search extends React.Component {
 		}
 	}
 
+	//Sets state of query to user input
 	updateQuery = (userQuery) => {
 		this.setState({
 				query: userQuery
@@ -22,6 +23,7 @@ export class Search extends React.Component {
 		this.updateBookSearch(userQuery)
 	}
 
+	//Returns list of books based on user query or returns a blank page if no matches are found
 	updateBookSearch = (userQuery) => {
 	if(userQuery) {
 		API.search(userQuery).then(booksResult => {
@@ -44,11 +46,9 @@ export class Search extends React.Component {
 				<SearchLibrary query={this.state.query} updateQuery={this.updateQuery}/>
 
 			<div className="search-books-results">
-				<ol className="books-grid">
-			
+				<ol className="books-grid">			
 				{this.state.searchBooks.map((theBooks) => {
-					let shelf = "none";
-					
+					let shelf = "none";					
 					/*
 						1. Determines whether the book id of a book returned from a search matches the book id of a book already on a shelf 
 						2. If there is a book id match, the shelf of the matched item will be set to the shelf for the identical book
