@@ -27,8 +27,8 @@ export class Main extends React.Component {
             <Reads shelfName="Read" updateShelf={this.props.updateShelf} read={read}/>
           </div>
         </div>  
-
-        {/* FindBooks Componenet*/}
+ 
+        {/* FindBooks Component*/}
       <FindBooks />
     </div>
     );
