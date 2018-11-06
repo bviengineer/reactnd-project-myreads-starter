@@ -3,12 +3,11 @@ import { ChangeShelf } from "./ChangeShelf.js"
 
 
 
-//Rendering in Search.js, reads.js, desiredReeds.js, currentReads.js
-export class Book extends React.Component {	
-	render(){
-		
+/*Rendering in Search.js, reads.js, desiredReeds.js, currentReads.js
+Compnent will display book attributes (image, author, title) for each book*/
+export const Book = (props) => {			
 		//if a book image does not exist, will display a blank space
-		let imgThumbnail = this.props.book.imageLinks ? this.props.book.imageLinks.thumbnail : "";
+		let imgThumbnail = props.book.imageLinks ? props.book.imageLinks.thumbnail : "";
 
 		return(
 		<div className="book">
@@ -19,13 +18,12 @@ export class Book extends React.Component {
 				</div>
 
 				{/* ChangeShelf Component */}
-				<ChangeShelf book={this.props.book} updateShelf={this.props.updateShelf} activeShelf={this.props.activeShelf}/>
+				<ChangeShelf book={props.book} updateShelf={props.updateShelf} activeShelf={props.activeShelf}/>
 			</div>
 			
-			<div className="book-title">{this.props.book.title}</div>
-			<div className="book-authors">{this.props.book.authors}</div>
+			<div className="book-title">{props.book.title}</div>
+			<div className="book-authors">{props.book.authors}</div>
 		
 		</div>
 		);
 	}
-}
