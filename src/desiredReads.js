@@ -10,14 +10,14 @@ export const DesiredReads = (props) => {
       <div className="bookshelf-books">
         <ol className="books-grid">
           {props.wantToRead.map(allBooks => (
-            <li key={allBooks.id}>
-              <Book 
-                book={allBooks} 
-                updateShelf={props.updateShelf}
-                activeShelf="wantToRead" />
-            </li>
-          ))
-        }
+              <li key={allBooks.id}>
+                <Book 
+                  book={allBooks} 
+                  updateShelf={props.updateShelf}
+                  activeShelf="wantToRead" />
+              </li>
+            ))
+          }
         </ol>
       </div>
     </div>
