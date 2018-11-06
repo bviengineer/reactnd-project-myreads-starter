@@ -1,9 +1,9 @@
 import React from 'react';
-import { Header } from "./header.js";
-import { CurrentReads } from './currentReads.js';
-import { DesiredReads } from './desiredReads.js';
+import { Header } from "./components/header.js";
+import { CurrentReads } from './components/currentReads.js';
+import { DesiredReads } from './components/desiredReads.js';
 import { Reads } from './reads.js';
-import { FindBooks } from "./findBooks.js";
+import { FindBooks } from "./components/findBooks.js";
 
 
 //Rendering in App.js - container that holds header, shelves and search button
