@@ -2,7 +2,7 @@ import React from 'react';
 import { Header } from "./components/header.js";
 import { CurrentReads } from './components/currentReads.js';
 import { DesiredReads } from './components/desiredReads.js';
-import { Reads } from './reads.js';
+import { Reads } from './components/reads.js';
 import { FindBooks } from "./components/findBooks.js";
 
 

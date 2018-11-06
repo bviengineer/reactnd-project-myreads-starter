@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import { Search } from './Search.js';
+import { Search } from './components/Search.js';
 import { Main } from './Main.js';
 import * as API from './BooksAPI';
 import './App.css';
