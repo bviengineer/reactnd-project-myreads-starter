@@ -6,14 +6,14 @@ import { Reads } from './reads.js';
 import { FindBooks } from "./findBooks.js";
 
 
-//Rendering in App.js
+//Rendering in App.js - container that holds header, shelves and search button
 export class Main extends React.Component {
   render(){
     const booksCollection = this.props.bookCollection;
     const currentReads = booksCollection.filter(book => book.shelf === "currentlyReading");
     const desiredReads = booksCollection.filter(book => book.shelf === "wantToRead");
     const read = booksCollection.filter(book => book.shelf === "read");
-    return(
+    return( 
       <div className="list-books">
         
         {/* Header Component */}
@@ -28,13 +28,9 @@ export class Main extends React.Component {
           </div>
         </div>  
 
-        {/* Find Books Componenet*/}
+        {/* FindBooks Componenet*/}
       <FindBooks />
     </div>
     );
   }
 }
-
-/* Will like to
--Separate Add a book & placed it it findBooks but findBooks is having an error
-*/
