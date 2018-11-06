@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Book } from './Book.js';
+import { CloseSearch } from "./closeSearch.js";
 import * as API from '../BooksAPI';
 
 
@@ -41,11 +41,8 @@ export class Search extends React.Component {
 			<div className="search-books">
 				<div className="search-books-bar">
 				
-				{/* React router link implementation - returns to main page */}
-				<Link 
-					className="close-search"
-					to="/">Close
-				</Link>
+				{/* Returns to main page */}
+				<CloseSearch />
 					
 					{/* Search Bar
 					---Initial state and appearence will be empty
