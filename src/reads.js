@@ -3,18 +3,17 @@ import { Book } from "./Book.js"
 
 
 //Rendering in Main.js - shelf for all books marked as read
-export class Reads extends React.Component {
-  render(){
+export const Reads = (props) => {
   return(
     <div className="bookshelf">
-      <h2 className="bookshelf-title">{this.props.shelfName}</h2>
+      <h2 className="bookshelf-title">{props.shelfName}</h2>
       <div className="bookshelf-books">
         <ol className="books-grid">          
-          {this.props.read.map(allBooks => (
+          {props.read.map(allBooks => (
           <li key={allBooks.id}>
             <Book 
               book={allBooks} 
-              updateShelf={this.props.updateShelf}
+              updateShelf={props.updateShelf}
               activeShelf="read" />
           </li>
           ))
@@ -23,5 +22,4 @@ export class Reads extends React.Component {
       </div>
     </div>
   );
-}
 }
