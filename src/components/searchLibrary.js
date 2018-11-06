@@ -1,4 +1,5 @@
 import React from "react";
+import DebounceInput from "react-debounce-input";
 import { Link } from 'react-router-dom';
 
 
@@ -14,9 +15,11 @@ export const SearchLibrary = (props) => {
 			---Initial state and appearence will be empty
 			---State and appeareance will populate based on user query, if any matches are found */}
 			<div className="search-books-input-wrapper">
-				<input type="text" 
+				<DebounceInput 
+					type="text" 
 					placeholder="Search by title or author" 
 					value={props.query}
+					debouncetimeout={1000}
 					onChange={(e) => props.updateQuery(e.target.value)} />
 			</div>
 		</div>
