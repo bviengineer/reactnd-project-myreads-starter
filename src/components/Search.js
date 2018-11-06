@@ -67,7 +67,7 @@ export class Search extends React.Component {
 						</li>
 					); //closing brace for nested return
 				}) //closing braces for map method
-				}
+				} 
 						</ol>
 					</div>
 			</div>

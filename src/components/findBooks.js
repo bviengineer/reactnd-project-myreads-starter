@@ -8,5 +8,5 @@ export const FindBooks = () => {
     <div className="open-search">
       <Link to="/Search"> Add a book </Link>
     </div>
-  );
+  ); 
 }
