@@ -1,5 +1,5 @@
 import React from "react";
-import { Book } from "./compoents/Book.js"
+import { Book } from "./Book.js"
 
 
 //Rendering in Mains.js - shelf for all books marked as Currently Reading
