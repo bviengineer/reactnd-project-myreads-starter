@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShelfChanger } from "./ChangeShelf.js"
+import { ChangeShelf } from "./ChangeShelf.js"
 
 
 
