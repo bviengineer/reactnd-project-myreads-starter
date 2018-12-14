@@ -4,15 +4,17 @@ This web application allows users to search for, and select, books. The books ca
 The user interface for MyReads, was built using React and is part of the Udacity Front End Nanodegree, project work. A code base was provided and developed upon.
 
 # View Project
-* Clone the repository
-* Using your command prompt (CLI), navigate to the project directory
-* Install [node package manager (npm)](https://nodejs.org/en/). Note, npm is automatically installed during the installation of node.
-  * To determine if you already have node and npm installed, go to your command prompt and check the versions by typing:
-    * node -v   then enter key
-    * npm -v    then enter key
-    * If the results of running each command returns with version numbers, node and npm are installed, otherwise, please install node/npm.
-  * Run npm install to update the project with dependencies
-  * Run npm start and the page will automatically open in your default browser
+* View a hosted copy of the project [here](https://brave-lovelace-89002e.netlify.com/)
+* Alternatively, you may: 
+  * Clone the repository
+  * Using your command prompt (CLI), navigate to the project directory
+  * Install [node package manager (npm)](https://nodejs.org/en/). Note, npm is automatically installed during the installation of node.
+    * To determine if you already have node and npm installed, go to your command prompt and check the versions by typing:
+      * node -v   then enter key
+      * npm -v    then enter key
+      * If the results of running each command returns with version numbers, node and npm are installed, otherwise, please install node/npm.
+    * Run npm install to update the project with dependencies
+    * Run npm start and the page will automatically open in your default browser
 
 ## Credits
 [Maeva NAP Walkthrough](https://youtu.be/i6L2jLHV9j8) was instrumental during the development of this project.
